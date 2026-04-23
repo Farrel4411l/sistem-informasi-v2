@@ -6,11 +6,11 @@ export function Footer() {
   return (
     <footer className="bg-[var(--surface-container-low)] w-full py-12 px-6 md:px-8">
       <RevealOnScroll>
-        <div className="flex flex-col md:flex-row justify-between items-center gap-6 border-t border-[var(--outline-variant)]/20 pt-12 max-w-7xl mx-auto">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6 border-t border-[var(--outline-variant)]/20 pt-12 max-w-7xl mx-auto relative">
           <div className="font-bold text-[var(--on-surface)] text-2xl tracking-tighter">
             SISTEM INFORMASI
           </div>
-          <div className="flex gap-8">
+          <div className="flex gap-6 md:absolute md:left-1/2 md:-translate-x-1/2">
             <a
               href="#"
               className="text-[var(--muted-foreground)] hover:text-[var(--on-surface)] underline underline-offset-4 transition-all duration-300 text-sm tracking-wide"
