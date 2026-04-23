@@ -65,10 +65,10 @@ export function CurriculumSection() {
       <div className="px-6 md:px-24 max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row gap-16 items-center">
           <RevealOnScroll direction="left" className="order-2 md:order-1 flex-1">
-            <span className="text-[var(--secondary)] font-bold text-sm tracking-widest block mb-4 uppercase">
+            <span className="text-[var(--primary)] font-bold text-sm tracking-widest block mb-4 uppercase">
               The Academic Blueprint
             </span>
-            <h2 className="text-4xl md:text-5xl font-black tracking-tight text-[var(--on-secondary-container)] mb-8 text-balance">
+            <h2 className="text-5xl md:text-6xl font-black tracking-tight text-[var(--on-secondary-container)] mb-8 text-balance" style={{ lineHeight: '1.2' }}>
               Adaptive Curriculum
             </h2>
             <div className="relative">
@@ -77,16 +77,18 @@ export function CurriculumSection() {
               <div className="absolute bottom-0 left-0 right-0 h-6 bg-gradient-to-t from-[var(--secondary-container)] to-transparent z-10 pointer-events-none" id="scroll-fade-bottom" />
 
               {/* Scrollable container */}
-              <div className="max-h-[400px] overflow-y-auto custom-scrollbar pr-4 space-y-5">
+              <div className="max-h-[500px] overflow-y-auto custom-scrollbar pr-4 space-y-5">
                 {curriculum.map((item, index) => (
                   <RevealOnScroll key={item.title} delay={Math.min(index * 100, 300)}>
-                    <div className="flex gap-4 group p-3 rounded-xl transition-all duration-300 hover:bg-[var(--surface)]/50">
-                      <div className="bg-[var(--surface)] p-3 rounded-xl shadow-sm h-fit text-[var(--secondary)] transition-all duration-300 group-hover:scale-110 group-hover:shadow-md">
-                        {item.icon}
+                    <div className="flex gap-5 group p-4 rounded-xl transition-all duration-300 hover:bg-[var(--surface)]/50">
+                      <div className="bg-[var(--surface)] p-3 rounded-xl shadow-sm h-fit text-[var(--primary)] transition-all duration-300 group-hover:scale-110 group-hover:shadow-md flex-shrink-0">
+                        <div className="w-7 h-7">
+                          {item.icon}
+                        </div>
                       </div>
-                      <div className="flex-1">
-                        <h4 className="font-bold text-lg mb-1 text-[var(--on-secondary-container)] group-hover:text-[var(--secondary)] transition-colors duration-300">{item.title}</h4>
-                        <p className="text-[var(--on-secondary-container)]/70 text-sm leading-relaxed">{item.description}</p>
+                      <div className="flex-1 min-w-0">
+                        <h4 className="font-bold text-xl mb-2 text-[var(--on-secondary-container)] group-hover:text-[var(--primary)] transition-colors duration-300" style={{ fontSize: '1.625rem' }}>{item.title}</h4>
+                        <p className="text-[var(--on-secondary-container)]/75 text-base leading-relaxed" style={{ fontSize: '1rem', lineHeight: '1.6' }}>{item.description}</p>
                       </div>
                     </div>
                   </RevealOnScroll>
@@ -94,7 +96,7 @@ export function CurriculumSection() {
               </div>
 
               {/* Scroll hint */}
-              <div className="flex items-center justify-center gap-2 mt-4 text-[var(--on-secondary-container)]/50 text-xs">
+              <div className="flex items-center justify-center gap-2 mt-6 text-[var(--on-secondary-container)]/50 text-sm">
                 <svg className="w-4 h-4 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                 </svg>
@@ -109,7 +111,7 @@ export function CurriculumSection() {
               className="w-full aspect-video object-cover rounded-xl shadow-2xl transition-transform duration-500 hover:scale-[1.02]"
               src="/akreditasikampus.jpg"
             />
-            <div className="absolute inset-0 bg-[var(--secondary)]/10 mix-blend-overlay rounded-xl pointer-events-none" />
+            <div className="absolute inset-0 bg-[var(--primary)]/10 mix-blend-overlay rounded-xl pointer-events-none" />
           </RevealOnScroll>
         </div>
       </div>

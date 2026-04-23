@@ -6,6 +6,7 @@ import { ProfileSection } from "@/components/sections/profile-section"
 import { CurriculumSection } from "@/components/sections/curriculum-section"
 import { AccreditationSection } from "@/components/sections/accreditation-section"
 import { NewsSkillsSection } from "@/components/sections/news-skills-section"
+import { AlumniSection } from "@/components/sections/alumni-section"
 import { PartnersSection } from "@/components/sections/partners-section"
 import { JoinSection } from "@/components/sections/join-section"
 import { Footer } from "@/components/footer"
@@ -22,6 +23,7 @@ export default function Home() {
         <CurriculumSection />
         <AccreditationSection />
         <NewsSkillsSection />
+        <AlumniSection />
         <PartnersSection />
         <JoinSection />
       </main>
