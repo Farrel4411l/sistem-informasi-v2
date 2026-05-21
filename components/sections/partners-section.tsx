@@ -3,9 +3,12 @@
 import { RevealOnScroll } from "@/components/reveal-on-scroll"
 
 const partners = [
-  { name: "BCA", image: "/logobca.png" },
-  { name: "SPIL", image: "/logospil.jpg" },
-  { name: "Adaro", image: "/logoadaro.png" },
+  { name: "BCA", image: "/logobca3.png" },
+  { name: "SPIL", image: "/logospill4.png" },
+  { name: "Adaro", image: "/logoadaro2.png" },
+  { name: "AHM", image: "/logoahm2.png" },
+  { name: "PT. Temas", image: "/logotemas.png" },
+  { name: "Metro Data", image: "/logometrodata.png" },
 ]
 
 export function PartnersSection() {

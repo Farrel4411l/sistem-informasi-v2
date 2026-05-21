@@ -6,46 +6,12 @@ import { RevealOnScroll } from "@/components/reveal-on-scroll"
 const alumni = [
   {
     id: 1,
-    name: "Alumni Name 1",
-    position: "Software Engineer at Tech Company",
-    photo: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
-    linkedIn: "https://linkedin.com",
+    name: "Kevin Wilmer Vitorio",
+    position: "Front End Developer at Simpang Raya",
+    photo: "kevin.png",
+    linkedIn: "https://www.linkedin.com/in/kevinwilmerv?originalSubdomain=id",
   },
-  {
-    id: 2,
-    name: "Alumni Name 2",
-    position: "Business Analyst at Fortune 500",
-    photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
-    linkedIn: "https://linkedin.com",
-  },
-  {
-    id: 3,
-    name: "Alumni Name 3",
-    position: "Data Scientist at AI Startup",
-    photo: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
-    linkedIn: "https://linkedin.com",
-  },
-  {
-    id: 4,
-    name: "Alumni Name 4",
-    position: "Product Manager at Tech Leader",
-    photo: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
-    linkedIn: "https://linkedin.com",
-  },
-  {
-    id: 5,
-    name: "Alumni Name 5",
-    position: "System Architect at Global Firm",
-    photo: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop",
-    linkedIn: "https://linkedin.com",
-  },
-  {
-    id: 6,
-    name: "Alumni Name 6",
-    position: "Security Officer at Enterprise",
-    photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
-    linkedIn: "https://linkedin.com",
-  },
+
 ]
 
 export function AlumniSection() {
@@ -115,7 +81,12 @@ export function AlumniSection() {
         >
           {alumni.map((alumnus, index) => (
             <RevealOnScroll key={alumnus.id} delay={index * 100} direction="up">
-              <div className="group min-w-[280px] bg-[var(--card)] rounded-xl overflow-hidden border border-[var(--border)] shadow-sm hover:shadow-2xl transition-all duration-500 snap-start flex flex-col">
+              <a
+                href={alumnus.linkedIn}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group min-w-[280px] bg-[var(--card)] rounded-xl overflow-hidden border border-[var(--border)] shadow-sm hover:shadow-2xl transition-all duration-500 snap-start flex flex-col block cursor-pointer text-decoration-none hover:no-underline"
+              >
                 {/* Image Container */}
                 <div className="relative overflow-hidden bg-[var(--surface-container)]">
                   <img
@@ -172,7 +143,7 @@ export function AlumniSection() {
 
                 {/* Animated bottom accent bar */}
                 <div className="h-1 bg-gradient-to-r from-[var(--accent)] to-[var(--primary)] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
-              </div>
+              </a>
             </RevealOnScroll>
           ))}
         </div>

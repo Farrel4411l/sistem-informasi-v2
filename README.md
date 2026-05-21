@@ -33,3 +33,43 @@ To learn more, take a look at the following resources:
 - [v0 Documentation](https://v0.app/docs) - learn about v0 and how to use it.
 
 <a href="https://v0.app/chat/api/kiro/clone/Farrel4411l/sistem-informasi" alt="Open in Kiro"><img src="https://pdgvvgmkdvyeydso.public.blob.vercel-storage.com/open%20in%20kiro.svg?sanitize=true" /></a>
+
+
+
+v0-project/
+├── public/                          ← PUT IMAGES HERE
+│   ├── head-of-department.jpg       (Profile section)
+│   ├── accreditation-background.jpg (Accreditation section)
+│   ├── news-1.jpg                   (News card 1)
+│   ├── news-2.jpg                   (News card 2)
+│   ├── news-3.jpg                   (News card 3)
+│   └── partners/                    (Partner logos)
+│       ├── partner-1.png
+│       └── partner-2.png
+
+
+**Profile Section** - Head of Department photo
+
+- File: `components/sections/profile-section.tsx`
+- Replace the `src` URL with `/head-of-department.jpg`
+
+
+
+**Accreditation Section** - Large background image
+
+- File: `components/sections/accreditation-section.tsx`
+- Replace the `src` URL with `/accreditation-background.jpg`
+
+
+
+**News/Skills Section** - Three scrollable news cards
+
+- File: `components/sections/news-skills-section.tsx`
+- Update the `newsItems` array with `/news-1.jpg`, `/news-2.jpg`, `/news-3.jpg`
+
+
+
+**Partners Section** - Partner company logos
+
+- File: `components/sections/partners-section.tsx`
+- Create `/public/partners/` folder and add logos there
